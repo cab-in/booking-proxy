@@ -4,7 +4,8 @@
   "description": "Proxy for the booking component",
   "scripts": {
     "start": "nodemon server/index.js",
-    "upload": "node s3_upload.js bedroost-booking-static ./booking/client/dist/main.js"
+    "upload": "node s3_upload.js bedroost-booking-static ./booking/client/dist/main.js",
+    "k6": "k6 run server/k6script.js"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,13 @@
   "dependencies": {
     "aws-sdk": "^2.493.0",
     "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "http-proxy": "^1.17.0",
+    "http-proxy-middleware": "^0.19.1",
     "morgan": "^1.9.1",
+    "newrelic": "^5.11.0",
     "nodemon": "^1.19.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
